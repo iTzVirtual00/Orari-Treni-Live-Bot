@@ -1,0 +1,15 @@
+# move this docker-compose.yml up a folder and create bot_token.txt with bot token
+
+services:
+  bot:
+    build:
+      context: ./livetrenibot
+    command: "python main.py"
+    volumes:
+      - ./livetrenibot:.
+    secrets:
+      - bot_token
+
+secrets:
+  bot_token:
+    file: bot_token.txt

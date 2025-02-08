@@ -1,0 +1,7 @@
+services:
+  bot:
+    build:
+      context: livetrenibot
+    command: "python main.py"
+    volumes:
+      - ./livetrenibot:.

@@ -50,5 +50,5 @@ class Button(Base):
 
     user = relationship('User', back_populates='buttons')
 
-engine = create_engine("sqlite:///sqlite.db")
+engine = create_engine("sqlite:///volume/sqlite.db")
 SessionFactory = sessionmaker(bind=engine)

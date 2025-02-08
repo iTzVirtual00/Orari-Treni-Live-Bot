@@ -3,10 +3,13 @@
 services:
   bot:
     build:
-      context: ./livetrenibot
+      context: ./Orari-Treni-Live-Bot
     command: "python main.py"
     volumes:
-      - ./livetrenibot:.
+      - ./data:/home/bot/volume
+    environment:
+      DOCKER_MODE: 1
+      LOG_LEVEL: INFO
     secrets:
       - bot_token
 
